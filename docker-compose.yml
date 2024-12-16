@@ -2,5 +2,5 @@ services:
   csharpchallenges:
     build:
       context: .
-      dockerfile: CSharpChallenges.Console/Dockerfile
+      dockerfile: CSharpChallenges.Consoles/Dockerfile
     
