@@ -3,10 +3,22 @@ namespace CSharpChallenges.Consoles.CodeChallenges
     public class LinqChallenges {
         public int CountNumbers(int[] sortedArray, int lessThan)
         {
-            var test = sortedArray.Where(x => x < (lessThan+1) ).Distinct().Order().ToArray();
+            int counter = 0;
+            // var getList = sortedArray.Where(x => x < (lessThan+1) ).Distinct().Order().ToArray();
+            var getList = sortedArray.Where(x => x < (lessThan+1) ).Distinct().Order().Count();
+            // Console.WriteLine(getList);
             
-            Console.WriteLine(test);
-            return 0;
+            for (int i = 0; i < sortedArray.Count(); i++)
+            {
+                if(sortedArray[i] < lessThan) {
+                    counter++;
+                }  
+                else {
+                    break;
+                }
+                
+            }   
+            return counter;
         }
 
     }
