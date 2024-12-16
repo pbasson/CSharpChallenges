@@ -8,5 +8,9 @@ namespace CSharpChallenges.Consoles.CodeChallenges {
         public static double StructMathExtension(this int[] ints) {
             return Math.Log10(ints[0]); 
         }
+
+        public static double DoubleMathExtension(this double ints) {
+            return Math.Log10(ints); 
+        }
     }
 }

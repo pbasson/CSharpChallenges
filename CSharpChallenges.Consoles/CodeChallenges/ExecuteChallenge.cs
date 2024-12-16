@@ -21,9 +21,16 @@ namespace CSharpChallenges.Consoles.CodeChallenges
             Console.WriteLine(counter);
         }
 
-        public void GetEvenNumbersFromList_Execute() {
+        public void GetEvenNumbersFromList_Execute() { 
             int[] test = [10,0,1];
-            Console.WriteLine($"{test.StructMathExtension()}");
+            double test1= 1.00; 
+            10.0.DoubleMathExtension(); 
+
+            Console.WriteLine($"Return: {0:F1}",test.StructMathExtension());
+            Console.WriteLine($"Return: {0:0.00}",test.StructMathExtension());
+            Console.WriteLine($"Return: {test.StructMathExtension()}");
+            Console.WriteLine($"Return01: {0:0.00}",1.00 );
+            Console.WriteLine($"Return01: {test1}" );
             new LinqChallenges().GetEvenNumbersFromList(CodeVariable.CountNumbers );
         }
     }
