@@ -24,10 +24,10 @@ namespace CSharpChallenges.Consoles.CodeChallenges
             switch (modifyStringOptions)
             {
                 case ModifyStringOptions.Alphabet: 
-                    Console.WriteLine("Test");
+                    Console.WriteLine($"String: {str}");
 
-                    char[] newChar = str.ToLower().ToCharArray();                
-
+                    var newChar = str.ToLower().Where(x => Char.IsLetter(x) );                
+                    Console.WriteLine($"newString: {string.Join("", newChar)}");
                     break;
                 default:
                     break;
