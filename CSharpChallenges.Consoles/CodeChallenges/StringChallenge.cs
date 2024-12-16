@@ -1,3 +1,5 @@
+using System.Dynamic;
+
 namespace CSharpChallenges.Consoles.CodeChallenges
 {
     public class StringChallenge
@@ -34,6 +36,15 @@ namespace CSharpChallenges.Consoles.CodeChallenges
             }
 
             return str;
+        }
+
+        public string GetSubString(string str, int length, int start = 0 ) {
+            Console.WriteLine($"String: {str}");
+            
+            var subString = str.Substring(start,length);
+            
+            Console.WriteLine($"String: {subString}");
+            return subString;
         }
     }
 

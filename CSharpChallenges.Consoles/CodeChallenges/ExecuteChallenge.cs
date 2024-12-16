@@ -1,3 +1,5 @@
+using System.Security.Authentication;
+
 namespace CSharpChallenges.Consoles.CodeChallenges
 {
     public class ExecuteChallenge {
@@ -6,7 +8,9 @@ namespace CSharpChallenges.Consoles.CodeChallenges
         {
             // var test = Console.ReadLine();
             // GetEvenNumbersFromList_Execute();
-            ModifyString_Execute();
+            // ModifyString_Execute();
+            GetSubString_Execute();
+
         }
 
         public List<string> AllPrefixes_Execute() {
@@ -24,6 +28,10 @@ namespace CSharpChallenges.Consoles.CodeChallenges
         public void CountNumbers_Execute() {
             var counter = new LinqChallenges().CountNumbers(CodeVariable.CountNumbers, 4 );
             Console.WriteLine(counter);
+        }
+
+        public string GetSubString_Execute() {
+            return new StringChallenge().GetSubString(CodeVariable.ModString, 10,4);
         }
 
         public void GetEvenNumbersFromList_Execute() { 
