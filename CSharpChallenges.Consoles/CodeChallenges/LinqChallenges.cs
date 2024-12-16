@@ -21,6 +21,27 @@ namespace CSharpChallenges.Consoles.CodeChallenges
             return counter;
         }
 
+        public void GetEvenNumbersFromList(int[] evenList) {
+            
+            var getList = evenList.Where(x => x % 2 == 0 ).ToArray();
+
+            var getList1 = from even in evenList
+                        where even % 2 == 0 
+                        select even; 
+
+            for (int i = 0; i < getList.Count(); i++)
+            {
+                Console.WriteLine( $"{getList[i]}" );
+            }
+            foreach (var item in getList1)
+            {
+                Console.WriteLine( $"{item}" );
+                
+            }
+
+        }
+
+
     }
 
 

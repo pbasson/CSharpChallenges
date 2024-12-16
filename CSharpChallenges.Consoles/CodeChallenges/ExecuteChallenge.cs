@@ -5,7 +5,7 @@ namespace CSharpChallenges.Consoles.CodeChallenges
         public ExecuteChallenge()
         {
             // var test = Console.ReadLine();
-            LinqChallenges_Execute();
+            GetEvenNumbersFromList_Execute();
         }
 
         public List<string> AllPrefixes_Execute() {
@@ -16,11 +16,16 @@ namespace CSharpChallenges.Consoles.CodeChallenges
             new PalindromeChallenge().FindPalindromeInString( !(string.IsNullOrEmpty(str)) ? str : (CodeVariable.Palindrome));
         }
 
-        public void LinqChallenges_Execute() {
+        public void CountNumbers_Execute() {
             var counter = new LinqChallenges().CountNumbers(CodeVariable.CountNumbers, 4 );
             Console.WriteLine(counter);
         }
 
+        public void GetEvenNumbersFromList_Execute() {
+            int[] test = [10,0,1];
+            Console.WriteLine($"{test.StructMathExtension()}");
+            new LinqChallenges().GetEvenNumbersFromList(CodeVariable.CountNumbers );
+        }
     }
 
     public static class CodeVariable {
