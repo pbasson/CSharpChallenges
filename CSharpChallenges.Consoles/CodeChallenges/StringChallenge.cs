@@ -17,6 +17,24 @@ namespace CSharpChallenges.Consoles.CodeChallenges
             Console.WriteLine($"OutString: {string.Join(", ", outString)}");
             return outString;
         }
+
+
+        public string ModifyString(string str, ModifyStringOptions modifyStringOptions) {
+            
+            switch (modifyStringOptions)
+            {
+                case ModifyStringOptions.Alphabet: 
+                    Console.WriteLine("Test");
+
+                    char[] newChar = str.ToLower().ToCharArray();                
+
+                    break;
+                default:
+                    break;
+            }
+
+            return str;
+        }
     }
 
 }
