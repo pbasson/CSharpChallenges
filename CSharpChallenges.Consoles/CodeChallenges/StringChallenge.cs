@@ -1,6 +1,6 @@
 namespace CSharpChallenges.Consoles.CodeChallenges
 {
-    public class StringCode
+    public class StringChallenge
     {
         public List<string> AllPrefixes(int prefixLength, IEnumerable<string> words)
         {
