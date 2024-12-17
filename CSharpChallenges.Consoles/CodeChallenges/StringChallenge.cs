@@ -41,11 +41,11 @@ namespace CSharpChallenges.Consoles.CodeChallenges
         }
 
         public string GetSubString(string str, int length, int start = 0 ) {
-            Console.WriteLine($"String: {str}");
+            // Console.WriteLine($"String: {str}");
             
             var subString = str.Substring(start,length);
             
-            Console.WriteLine($"String: {subString}");
+            // Console.WriteLine($"String: {subString}");
             return subString;
         }
     }
