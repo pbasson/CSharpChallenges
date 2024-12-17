@@ -12,12 +12,10 @@ namespace CSharpChallenges.Consoles.CodeChallenges {
                 case DiscountType.Seasonal:
                     return totalPrice - (totalPrice* 0.12);
                 case DiscountType.Weight:
-                    if ((int)cartWeight > 10)
-                    {
+                    if ((int)cartWeight > 10) {
                         return totalPrice - (totalPrice* 0.18);
                     } 
-                    else
-                    {
+                    else {
                         return totalPrice - (totalPrice* 0.06);
                     }
                 default:
@@ -25,7 +23,7 @@ namespace CSharpChallenges.Consoles.CodeChallenges {
             }
         } 
 
-        public static Tuple<int, int>? FindTwoSum(List<int> list, int sum)
+        public Tuple<int, int> FindTwoSum(List<int> list, int sum)
         {
             var hs = new HashSet<int>(list);
 
@@ -35,8 +33,12 @@ namespace CSharpChallenges.Consoles.CodeChallenges {
                 if (hs.Contains(diff) && i != list.IndexOf(diff))
                     return new Tuple<int, int>(i, list.IndexOf(diff));
             }
+            return new Tuple<int, int>(0,0);
+        }
 
-            return null;
+        public Tuple<double, double> FindRoots(double a, double b, double c)
+        {
+            return new Tuple<double, double>(0,0); 
         }
     }
 }

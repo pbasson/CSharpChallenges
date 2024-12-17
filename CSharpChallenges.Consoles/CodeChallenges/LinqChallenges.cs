@@ -1,3 +1,4 @@
+using System.Linq;
 using CSharpChallenges.Consoles.Interfaces;
 
 namespace CSharpChallenges.Consoles.CodeChallenges
@@ -6,9 +7,7 @@ namespace CSharpChallenges.Consoles.CodeChallenges
         public int CountNumbers(int[] sortedArray, int lessThan)
         {
             int counter = 0;
-            // var getList = sortedArray.Where(x => x < (lessThan+1) ).Distinct().Order().ToArray();
             var getList = sortedArray.Where(x => x < (lessThan+1) ).Distinct().Order().Count();
-            // Console.WriteLine(getList);
             
             for (int i = 0; i < sortedArray.Count(); i++)
             {
@@ -31,19 +30,18 @@ namespace CSharpChallenges.Consoles.CodeChallenges
                         where even % 2 == 0 
                         select even; 
 
-            for (int i = 0; i < getList.Count(); i++)
-            {
+            for (int i = 0; i < getList.Count(); i++) {
                 Console.WriteLine( $"{getList[i]}" );
             }
-            foreach (var item in getList1)
-            {
+            getList.ToList().ForEach(action => {
+                Console.WriteLine( $"{action}" ); 
+            } );            
+            
+            foreach (var item in getList1) {
                 Console.WriteLine( $"{item}" );
-                
             }
 
         }
-
-
     }
 
 
