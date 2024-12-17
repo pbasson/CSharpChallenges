@@ -1,0 +1,8 @@
+services:
+  csharpchallenges:
+    build:
+      context: .
+      dockerfile: CSharpChallenges.Consoles/Dockerfile
+    stdin_open: true
+    tty: true
+    
