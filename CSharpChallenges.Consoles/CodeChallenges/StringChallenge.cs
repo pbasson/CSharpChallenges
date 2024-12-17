@@ -1,8 +1,10 @@
 using System.Dynamic;
+using CSharpChallenges.Consoles.Helper;
+using CSharpChallenges.Consoles.Interfaces;
 
 namespace CSharpChallenges.Consoles.CodeChallenges
 {
-    public class StringChallenge
+    public class StringChallenge : IStringChallenge
     {
         public List<string> AllPrefixes(int prefixLength, IEnumerable<string> words)
         {

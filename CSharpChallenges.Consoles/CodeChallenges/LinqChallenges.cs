@@ -1,6 +1,8 @@
+using CSharpChallenges.Consoles.Interfaces;
+
 namespace CSharpChallenges.Consoles.CodeChallenges
 {
-    public class LinqChallenges {
+    public class LinqChallenges : ILinqChallenges {
         public int CountNumbers(int[] sortedArray, int lessThan)
         {
             int counter = 0;
