@@ -8,5 +8,7 @@ namespace CSharpChallenges.Consoles.Interfaces
         string ModifyString(string str, ModifyStringOptions modifyStringOptions);
         string GetSubString(string str, int length, int start = 0 );
         string ReplaceCharInString(string str, int index );
+        string[] UniqueNames(string[] names1, string[] names2);
+
     }
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using CSharpChallenges.Consoles.CodeChallenges;
 using CSharpChallenges.Consoles.Helper;
 
@@ -15,7 +16,6 @@ namespace CSharpChallenges.Consoles.ExecuteChallenges
             return new StringChallenge().ModifyString(CodeVariable.ModString, ModifyStringOptions.Alphabet);
         }
 
-        
         public string GetSubString_Execute()
         {
             return new StringChallenge().GetSubString(CodeVariable.ModString, 10, 4);
@@ -26,6 +26,12 @@ namespace CSharpChallenges.Consoles.ExecuteChallenges
             Console.WriteLine("String:{0}", CodeVariable.ModString);
             var test = new StringChallenge().ReplaceCharInString(CodeVariable.ModString, CodeVariable.PrefixLength);
             Console.WriteLine("ReplaceCharInString:{0}", test);
+        }
+
+        public void UniqueNames() {
+            var test = new StringChallenge().UniqueNames(CodeArray.names1,CodeArray.names2);
+
+            Console.WriteLine("UniqueNames:{0}", string.Join(", ",test));
         }
     }
 

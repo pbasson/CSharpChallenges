@@ -4,7 +4,8 @@ namespace CSharpChallenges.Consoles.ExecuteChallenges
     {
         public ExecuteChallenge()
         {
-            new StringExecute().ReplaceCharInString();             
+            // new StringExecute().ReplaceCharInString();             
+            new StringExecute().UniqueNames();             
         }
 
     }
