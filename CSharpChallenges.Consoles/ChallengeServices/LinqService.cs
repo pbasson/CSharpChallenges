@@ -3,7 +3,7 @@ using CSharpChallenges.Consoles.Helper;
 
 namespace CSharpChallenges.Consoles.ExecuteChallenges
 {
-    public class LinqExecute
+    public class LinqService
     {
         public void CountNumbers_Execute()
         {

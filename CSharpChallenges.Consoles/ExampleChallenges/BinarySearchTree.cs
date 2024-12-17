@@ -1,5 +1,6 @@
 namespace CSharpChallenges.Consoles.ExampleChallenges
 {
+    /// <summary> Binary Search Tree:  </summary>
     public class BinarySearchTree
     {
         public bool Contains(Node root, int value)

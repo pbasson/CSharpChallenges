@@ -38,6 +38,8 @@ namespace CSharpChallenges.Consoles.CodeChallenges {
 
         public Tuple<double, double> FindRoots(double a, double b, double c)
         {
+
+            
             return new Tuple<double, double>(0,0); 
         }
     }

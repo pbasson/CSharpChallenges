@@ -2,9 +2,9 @@ using System.Linq;
 using CSharpChallenges.Consoles.CodeChallenges;
 using CSharpChallenges.Consoles.Helper;
 
-namespace CSharpChallenges.Consoles.ExecuteChallenges
+namespace CSharpChallenges.Consoles.ChallengeServices
 {
-    public class StringExecute
+    public class StringService
     {
         public List<string> AllPrefixes_Execute()
         {
@@ -28,10 +28,11 @@ namespace CSharpChallenges.Consoles.ExecuteChallenges
             Console.WriteLine("ReplaceCharInString:{0}", test);
         }
 
-        public void UniqueNames() {
-            var test = new StringChallenge().UniqueNames(CodeArray.names1,CodeArray.names2);
+        public void UniqueNames()
+        {
+            var test = new StringChallenge().UniqueNames(CodeArray.names1, CodeArray.names2);
 
-            Console.WriteLine("UniqueNames:{0}", string.Join(", ",test));
+            Console.WriteLine("UniqueNames:{0}", string.Join(", ", test));
         }
     }
 
