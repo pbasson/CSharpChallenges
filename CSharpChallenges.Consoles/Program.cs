@@ -1,4 +1,4 @@
-﻿using CSharpChallenges.Consoles.Helper;
+﻿using CSharpChallenges.Consoles.ExecuteChallenges;
 
 namespace CSharpChallenges.Consoles
 {

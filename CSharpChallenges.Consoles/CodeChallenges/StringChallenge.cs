@@ -1,4 +1,3 @@
-using System.Dynamic;
 using CSharpChallenges.Consoles.Helper;
 using CSharpChallenges.Consoles.Interfaces;
 
@@ -47,6 +46,18 @@ namespace CSharpChallenges.Consoles.CodeChallenges
             
             // Console.WriteLine($"String: {subString}");
             return subString;
+        }
+
+        public string ReplaceCharInString(string str, int index) {
+            char[] newChar = str.ToCharArray();
+
+            for (int i = 0; i < newChar.Count(); i++) {
+                if ((i+1) % index == 0) {
+                    newChar[i] = 'X';
+                }
+            }
+
+            return new string(newChar.ToArray());
         }
     }
 
