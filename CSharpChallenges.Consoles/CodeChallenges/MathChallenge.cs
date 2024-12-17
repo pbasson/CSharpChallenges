@@ -24,5 +24,19 @@ namespace CSharpChallenges.Consoles.CodeChallenges {
                     return 0.0;
             }
         } 
+
+        public static Tuple<int, int>? FindTwoSum(List<int> list, int sum)
+        {
+            var hs = new HashSet<int>(list);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                var diff = sum - list[i];
+                if (hs.Contains(diff) && i != list.IndexOf(diff))
+                    return new Tuple<int, int>(i, list.IndexOf(diff));
+            }
+
+            return null;
+        }
     }
 }

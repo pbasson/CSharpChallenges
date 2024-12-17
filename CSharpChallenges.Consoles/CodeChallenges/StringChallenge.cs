@@ -63,9 +63,9 @@ namespace CSharpChallenges.Consoles.CodeChallenges
         public string[] UniqueNames(string[] names1, string[] names2)
         {
             var test = names1.Union(names2).Order().ToArray();
-
             return test;
         }
+
     }
 
 }
