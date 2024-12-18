@@ -1,4 +1,4 @@
-﻿using CSharpChallenges.Consoles.ExecuteChallenges;
+﻿using CSharpChallenges.Consoles.ChallengeServices;
 
 namespace CSharpChallenges.Consoles
 {
@@ -6,7 +6,7 @@ namespace CSharpChallenges.Consoles
     {
         public static void Main(string[] str)
         {
-            new ExecuteChallenge();
+            new ExecuteService();
         }
 
     }

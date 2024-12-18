@@ -1,9 +1,9 @@
-using CSharpChallenges.Consoles.CodeChallenges;
+using CSharpChallenges.Infrastructure.CodeChallenges;
 using CSharpChallenges.Consoles.Helper;
 
-namespace CSharpChallenges.Consoles.ExecuteChallenges
+namespace CSharpChallenges.Consoles.ChallengeServices
 {
-    public class PalindromeExecute
+    public class PalindromeService
     {
         public void FindPalindromeInString_Execute(string str)
         {

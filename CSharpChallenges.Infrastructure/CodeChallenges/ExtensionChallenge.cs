@@ -1,4 +1,4 @@
-namespace CSharpChallenges.Consoles.CodeChallenges {
+namespace CSharpChallenges.Infrastructure.CodeChallenges {
     public static class ExtensionChallenge {
         
         public static int IntegerExtension(this string str) {
