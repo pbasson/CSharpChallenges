@@ -1,7 +1,7 @@
-using CSharpChallenges.Consoles.Helper;
-using CSharpChallenges.Consoles.Interfaces;
+using CSharpChallenges.Infrastructure.Enums;
+using CSharpChallenges.Infrastructure.Interfaces;
 
-namespace CSharpChallenges.Consoles.CodeChallenges {
+namespace CSharpChallenges.Infrastructure.CodeChallenges {
     public class MathChallenge : IMathChallenge
     {
         public double GetDiscountedPrice(double cartWeight, double totalPrice, DiscountType discountType) {

@@ -1,6 +1,6 @@
-using CSharpChallenges.Consoles.Helper;
+using CSharpChallenges.Infrastructure.Enums;
 
-namespace CSharpChallenges.Consoles.Interfaces
+namespace CSharpChallenges.Infrastructure.Interfaces
 {
     public interface IMathChallenge
     {

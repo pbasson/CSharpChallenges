@@ -1,11 +1,9 @@
-namespace CSharpChallenges.Consoles.ExecuteChallenges
+namespace CSharpChallenges.Consoles.ChallengeServices
 {
     public class ExecuteService
     {
         public ExecuteService()
         {
-            // new StringExecute().ReplaceCharInString();             
-            // new StringExecute().UniqueNames();             
             new MathService().FindRoots();
         }
 

@@ -1,6 +1,6 @@
-using System.Linq;
-using CSharpChallenges.Consoles.CodeChallenges;
 using CSharpChallenges.Consoles.Helper;
+using CSharpChallenges.Infrastructure.CodeChallenges;
+using CSharpChallenges.Infrastructure.Enums;
 
 namespace CSharpChallenges.Consoles.ChallengeServices
 {

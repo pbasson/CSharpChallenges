@@ -1,4 +1,4 @@
-namespace CSharpChallenges.Consoles.ExampleChallenges
+namespace CSharpChallenges.Infrastructure.ExampleChallenges
 {
     /// <summary> Binary Search Tree:  </summary>
     public class BinarySearchTree
