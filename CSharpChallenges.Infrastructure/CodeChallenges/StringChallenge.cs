@@ -8,7 +8,7 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges
         public List<string> AllPrefixes(int prefixLength, IEnumerable<string> words)
         {
             // filtered List to get the 
-            List<string> newOut = new List<string>();
+            List<string> newOut = [];
 
             foreach (var item in words)
             {

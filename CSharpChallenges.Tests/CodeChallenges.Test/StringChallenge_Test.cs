@@ -1,10 +1,10 @@
-using CSharpChallenges.Consoles.CodeChallenges;
+using CSharpChallenges.Infrastructure.CodeChallenges;
 
 namespace CSharpChallenges.Tests;
 
 public class StringChallenge_Test
 {
-    StringChallenge str = new StringChallenge();
+    StringChallenge str = new();
 
 
     [Fact]
@@ -18,6 +18,5 @@ public class StringChallenge_Test
         Assert.NotNull(result);
         Assert.NotEmpty(result); 
         Assert.Equal(testLength, result.Length);
-
     }
 }

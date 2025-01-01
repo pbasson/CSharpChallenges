@@ -7,7 +7,7 @@ namespace CSharpChallenges.Consoles.ChallengeServices
     {
         public void FindPalindromeInString_Execute(string str)
         {
-            new PalindromeChallenge().FindPalindromeInString(!string.IsNullOrEmpty(str) ? str : CodeVariable.Palindrome);
+            new PalindromeChallenge().FindPalindromeInString(!string.IsNullOrEmpty(str) ? str : CodeVariableStruct.Palindrome);
         }
     }
 }
