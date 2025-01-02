@@ -3,10 +3,10 @@ using CSharpChallenges.Infrastructure.Interfaces;
 namespace CSharpChallenges.Infrastructure.CodeChallenges
 {
     public class LinqChallenges : ILinqChallenges {
-        public int CountNumbers(int[] sortedArray, int lessThan)
-        {
+        public int CountNumbers(int[] sortedArray, int lessThan) {
             int counter = 0;
-            var getList = sortedArray.Where(x => x < (lessThan+1) ).Distinct().Order().Count();
+            Func<int, bool> IsLess = x => x < (lessThan+1) ; 
+            var getList = sortedArray.Where( IsLess ).Distinct().Order().Count();
             
             for (int i = 0; i < sortedArray.Count(); i++)
             {
@@ -16,14 +16,15 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges
                 else {
                     break;
                 }
-                
             }   
             return counter;
         }
 
         public void GetEvenNumbersFromList(int[] evenList) {
             
-            var getList = evenList.Where(x => x % 2 == 0 ).ToArray();
+            Func<int, bool> IsLinq = ( x => x % 2 == 0 );
+            var getList = evenList.Where( IsLinq ).ToArray();
+            //var getList = evenList.Where(x => x % 2 == 0 ).ToArray();
 
             var getList1 = from even in evenList
                         where even % 2 == 0 
