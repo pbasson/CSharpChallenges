@@ -15,21 +15,20 @@ Repo contains following Projects:
 | CSharpChallenges.Consoles | Code execution starts here. The service layer is responsible for setting variables and passing them to the infrastructure layer, where the challenge logic is implemented.  |
 | CSharpChallenges.Infrastructure | The coding challenges and their logic are implemented here, featuring original solutions to the problems.  |
 
+### Key Directories
+
+| Directory | Description |
+|---|---|
+| CSharpChallenges.Consoles/ChallengeServices | Service layer for executing code, setting up variables, and passing them to the infrastructure layer. |
+| CSharpChallenges.Infrastructure/CodeChallenges | Challenges focused on method implementation |
+| CSharpChallenges.Infrastructure/ExampleChallenges | Challenges include fully implemented examples with methods, classes, variables, enums, and more. |
+
 ### Technology
 
 | Technology | Version |
 |---|---|
 | ASP.NET | 8.0 |
 | XUNIT | 2.4.2 |
-
-### Key Directories
-
-
-| Directory | Description |
-|---|---|
-| CSharpChallenges.Consoles/ChallengeServices | Service layer for code execution. This will be set |
-| CSharpChallenges.Infrastructure/CodeChallenges | Challenges related to method implementation |
-| CSharpChallenges.Infrastructure/ExampleChallenges | Challenges related to examples full methods, class and variables enums etc |
 
 -------------------
 ## Usage
