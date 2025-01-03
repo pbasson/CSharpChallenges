@@ -4,7 +4,9 @@ namespace CSharpChallenges.Consoles.ChallengeServices
     {
         public ExecuteService()
         {
-            new MathService().FindRoots();
+            // new MathService().FindRoots();
+            new LinqService().CountNumbers_Execute();
+            new LinqService().GetEvenNumbersFromList_Execute();
         }
 
     }
