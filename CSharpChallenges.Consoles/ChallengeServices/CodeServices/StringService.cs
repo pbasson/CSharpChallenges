@@ -2,7 +2,7 @@ using CSharpChallenges.Consoles.Helper;
 using CSharpChallenges.Infrastructure.CodeChallenges;
 using CSharpChallenges.Infrastructure.Enums;
 
-namespace CSharpChallenges.Consoles.ChallengeServices
+namespace CSharpChallenges.Consoles.ChallengeServices.CodeServices
 {
     public class StringService
     {

@@ -45,5 +45,16 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges {
             // Console.WriteLine($"{a},{b},{c}: {neg},{plus} ");
             return new Tuple<double, double>(plus,neg); 
         }
+
+        public int BracketCombinations(int num) {
+            int res = 0; 
+                    
+            if (num <= 1) { return 1; }
+
+            for (int i = 0; i < num; i++)  
+                res += BracketCombinations(i) * BracketCombinations(num - i - 1); 
+
+            return res; 
+        }
     }
 }

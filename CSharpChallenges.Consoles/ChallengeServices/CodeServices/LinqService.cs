@@ -1,7 +1,7 @@
 using CSharpChallenges.Infrastructure.CodeChallenges;
 using CSharpChallenges.Consoles.Helper;
 
-namespace CSharpChallenges.Consoles.ChallengeServices
+namespace CSharpChallenges.Consoles.ChallengeServices.CodeServices
 {
     public class LinqService
     {

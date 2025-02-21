@@ -1,7 +1,7 @@
 using CSharpChallenges.Infrastructure.CodeChallenges;
 using CSharpChallenges.Consoles.Helper;
 
-namespace CSharpChallenges.Consoles.ChallengeServices
+namespace CSharpChallenges.Consoles.ChallengeServices.CodeServices
 {
     public class MathService
     {
@@ -17,5 +17,20 @@ namespace CSharpChallenges.Consoles.ChallengeServices
                 throw;
             }
         }
+
+        public void BracketCombinations()
+        {
+            try
+            {
+                var input = 3;
+                var result = new MathChallenge().BracketCombinations(input);
+                Console.WriteLine($"BracketCombinations: {input} / {result}");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }
