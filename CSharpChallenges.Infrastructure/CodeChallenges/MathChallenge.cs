@@ -48,12 +48,13 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges {
 
         public int BracketCombinations(int num) {
             int res = 0; 
-                    
+            // Console.WriteLine($"Num: {num} ");            
             if (num <= 1) { return 1; }
 
-            for (int i = 0; i < num; i++)  
-                res += BracketCombinations(i) * BracketCombinations(num - i - 1); 
-
+            for (int i = 0; i < num; i++) {
+                res += BracketCombinations(i) * BracketCombinations(num - (i + 1) ); 
+                // Console.WriteLine($"Num: {num} - Res: {res}");
+            } 
             return res; 
         }
     }
