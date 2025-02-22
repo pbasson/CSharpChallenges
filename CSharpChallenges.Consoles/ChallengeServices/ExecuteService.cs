@@ -7,7 +7,8 @@ namespace CSharpChallenges.Consoles.ChallengeServices
     {
         public ExecuteService()
         {
-            new MathService().BracketCombinations();
+            new MathService().QuestionsMarks();
+            // new MathService().BracketCombinations();
             // new LinqService().CountNumbers_Execute();
             // new LinqService().GetEvenNumbersFromList_Execute();
 

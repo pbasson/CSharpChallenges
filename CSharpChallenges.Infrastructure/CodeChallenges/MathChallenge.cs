@@ -57,5 +57,41 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges {
             } 
             return res; 
         }
+
+        public string QuestionsMarks(string str) { 
+            string result = "false";
+            int counter = 0;
+            char prevDigit = 'a';
+            char curDigit = 'a';
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                char digit = str[i];
+                if (digit == '?') { counter++; }
+                else if (char.IsDigit(digit))
+                {
+                    if (prevDigit == 'a') { prevDigit = digit; }
+                    else if (curDigit == 'a')
+                    {
+                        curDigit = digit;
+                        bool checkValue = (int)char.GetNumericValue(prevDigit) + (int)char.GetNumericValue(curDigit) == 10;
+                        bool checkCount = counter == 3;
+                        if ( checkValue && checkCount )
+                        {
+                            result = "true";
+                            prevDigit = curDigit;
+                            curDigit = 'a';
+                        }
+                        else if( checkValue && !checkCount )
+                        {
+                            return "false";
+                        }
+                        
+                    }
+                    counter = 0;
+                }
+            }
+            return result;
+        }
     }
 }

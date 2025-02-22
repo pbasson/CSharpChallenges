@@ -31,6 +31,20 @@ namespace CSharpChallenges.Consoles.ChallengeServices.CodeServices
                 throw;
             }
         }
-
+        
+        public void QuestionsMarks()
+        {
+            try
+            {
+                // var input = "acc?7??sss?3rr1??????5";
+                var input = "aa6?9";
+                var result = new MathChallenge().QuestionsMarks(input);
+                Console.WriteLine($"BracketCombinations: {input} / {result}");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
