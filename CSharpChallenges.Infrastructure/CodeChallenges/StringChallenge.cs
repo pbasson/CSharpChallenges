@@ -71,32 +71,41 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges
         {
             try {
                 var result = "";
+                var result01 = "";
+                var returnString = "No Combine Found";
+
                 var getList = strAry[1].Split(',');
 
                 foreach (var item in getList)
                 {
                     if (strAry[0].Contains(item) && item.Length > 1) {
-                        Console.WriteLine($"Word: {item} ");
+                        // Console.WriteLine($"Word: {item} ");
                         
                         var getString = strAry[0].Split(item, StringSplitOptions.RemoveEmptyEntries);
-
-                        var checkString = $"{item}{getString[0]}";
-                        var checkString02 = $"{getString[0]}{item}";
                         
-                        if( checkString == strAry[0]) {
-                            result = $"{item},{getString[0]}";
+                        foreach (var item01 in getList)
+                        {
+                            if (getString[0].Equals(item01)) {
+                                result01 = item01;
+                            }
                         }
-                        else if( checkString02 == strAry[0]) {
-                            result = $"{getString[0]},{item}";
+                        // Console.WriteLine($"result01: {result01} ");
+
+                        if(!string.IsNullOrEmpty(result01)) {
+
+                            var checkString = $"{item}{getString[0]}";
+                            var checkString02 = $"{getString[0]}{item}";
+                            
+                            if( checkString == strAry[0]) {
+                                result = $"{item},{getString[0]}";
+                            }
+                            else if( checkString02 == strAry[0]) {
+                                result = $"{getString[0]},{item}";
+                            }
                         }
-                        else {
-                            return "No Combine Found";
-                        }
-                    
                     }
                 }
-
-                return result;
+                return (!string.IsNullOrEmpty(result01)) ? result : returnString;
             }
             catch (Exception) {
                 
