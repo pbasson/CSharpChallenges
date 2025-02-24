@@ -76,13 +76,23 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges
                 foreach (var item in getList)
                 {
                     if (strAry[0].Contains(item) && item.Length > 1) {
-                        Console.WriteLine(item);
+                        Console.WriteLine($"Word: {item} ");
                         
-                        var test1 = strAry[0].Split(item, StringSplitOptions.None);
-                        var test2 = strAry[0].Split(item, StringSplitOptions.RemoveEmptyEntries);
-                        var test3 = strAry[0].Split(item, StringSplitOptions.TrimEntries);
+                        var getString = strAry[0].Split(item, StringSplitOptions.RemoveEmptyEntries);
 
-                        Console.WriteLine($"{test1} {test2} {test3}");
+                        var checkString = $"{item}{getString[0]}";
+                        var checkString02 = $"{getString[0]}{item}";
+                        
+                        if( checkString == strAry[0]) {
+                            result = $"{item},{getString[0]}";
+                        }
+                        else if( checkString02 == strAry[0]) {
+                            result = $"{getString[0]},{item}";
+                        }
+                        else {
+                            return "No Combine Found";
+                        }
+                    
                     }
                 }
 
