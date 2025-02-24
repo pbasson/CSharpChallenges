@@ -1,4 +1,5 @@
 using System.Security.Cryptography.X509Certificates;
+using System.Xml.Serialization;
 using CSharpChallenges.Infrastructure.Enums;
 using CSharpChallenges.Infrastructure.Interfaces;
 
@@ -59,34 +60,29 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges {
         }
 
         public string QuestionsMarks(string str) { 
+            char defChar = 'a';
             string result = "false";
             int counter = 0;
-            char prevDigit = 'a';
-            char curDigit = 'a';
+            char prevDigit = defChar;
+            char curDigit = defChar;
 
-            for (int i = 0; i < str.Length; i++)
-            {
+            for (int i = 0; i < str.Length; i++) {
                 char digit = str[i];
                 if (digit == '?') { counter++; }
-                else if (char.IsDigit(digit))
-                {
-                    if (prevDigit == 'a') { prevDigit = digit; }
-                    else if (curDigit == 'a')
-                    {
+                else if (char.IsDigit(digit)) {
+                    if (prevDigit == defChar) { prevDigit = digit; }
+                    else if (curDigit == defChar) {
                         curDigit = digit;
                         bool checkValue = (int)char.GetNumericValue(prevDigit) + (int)char.GetNumericValue(curDigit) == 10;
                         bool checkCount = counter == 3;
-                        if ( checkValue && checkCount )
-                        {
+                        if ( checkValue && checkCount ) {
                             result = "true";
                             prevDigit = curDigit;
-                            curDigit = 'a';
+                            curDigit = defChar;
                         }
-                        else if( checkValue && !checkCount )
-                        {
+                        else if( checkValue && !checkCount ) {
                             return "false";
                         }
-                        
                     }
                     counter = 0;
                 }

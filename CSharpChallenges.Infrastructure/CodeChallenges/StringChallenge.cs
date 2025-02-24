@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using CSharpChallenges.Infrastructure.Enums;
 using CSharpChallenges.Infrastructure.Interfaces;
 
@@ -62,10 +63,36 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges
 
         public string[] UniqueNames(string[] names1, string[] names2)
         {
-            var test = names1.Union(names2).Order().ToArray();
-            return test;
+            var unionAry = names1.Union(names2).Order().ToArray();
+            return unionAry;
         }
 
+        public string WordSplit(string[] strAry)
+        {
+            try {
+                var result = "";
+                var getList = strAry[1].Split(',');
+
+                foreach (var item in getList)
+                {
+                    if (strAry[0].Contains(item) && item.Length > 1) {
+                        Console.WriteLine(item);
+                        
+                        var test1 = strAry[0].Split(item, StringSplitOptions.None);
+                        var test2 = strAry[0].Split(item, StringSplitOptions.RemoveEmptyEntries);
+                        var test3 = strAry[0].Split(item, StringSplitOptions.TrimEntries);
+
+                        Console.WriteLine($"{test1} {test2} {test3}");
+                    }
+                }
+
+                return result;
+            }
+            catch (Exception) {
+                
+                throw;
+            }
+        }
     }
 
 }

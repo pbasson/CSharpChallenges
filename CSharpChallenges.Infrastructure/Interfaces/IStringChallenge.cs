@@ -9,6 +9,6 @@ namespace CSharpChallenges.Infrastructure.Interfaces
         string GetSubString(string str, int length, int start = 0 );
         string ReplaceCharInString(string str, int index );
         string[] UniqueNames(string[] names1, string[] names2);
-
+        string WordSplit(string[] str);
     }
 }

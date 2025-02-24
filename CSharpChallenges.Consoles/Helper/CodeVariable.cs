@@ -8,6 +8,7 @@ namespace CSharpChallenges.Consoles.Helper {
 
     public readonly struct CodeArray{
         public static readonly IEnumerable<string> Words = ["flow", "flea", "Feast", "fast", "Float", "FARTHER", "Father", "fatTER"];
+        public static readonly string[] WordAry = ["baseball", "a,all,ball,bas,base,cat,code,d,e,quit,z"];
         public static readonly int[] CountNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         public static readonly string[] names1 = ["Ava", "Emma", "Olivia"];
         public static readonly string[] names2 = ["Olivia", "Sophia", "Emma"];

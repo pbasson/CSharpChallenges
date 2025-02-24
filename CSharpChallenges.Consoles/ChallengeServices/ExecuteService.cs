@@ -1,5 +1,4 @@
 using CSharpChallenges.Consoles.ChallengeServices.CodeServices;
-using CSharpChallenges.Consoles.ChallengeServices.ExampleServices;
 
 namespace CSharpChallenges.Consoles.ChallengeServices
 {
@@ -7,8 +6,8 @@ namespace CSharpChallenges.Consoles.ChallengeServices
     {
         public ExecuteService()
         {
-            new MathService().QuestionsMarks();
-            // new MathService().BracketCombinations();
+            new StringService().WordSplit();
+            // new MathService().QuestionsMarks();
             // new LinqService().CountNumbers_Execute();
             // new LinqService().GetEvenNumbersFromList_Execute();
 
