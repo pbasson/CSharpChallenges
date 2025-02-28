@@ -29,7 +29,7 @@ namespace CSharpChallenges.Consoles.ChallengeServices.CodeServices
         }
 
         public void WordSplit() {
-            var result = new StringChallenge().WordSplit(CodeArray.WordAry01);
+            var result = new StringChallenge().WordSplit(CodeArray.WordAry03);
             Console.WriteLine(result);
         } 
     }

@@ -79,7 +79,6 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges
                 foreach (var item in getList)
                 {
                     if (strAry[0].Contains(item) && item.Length > 1) {
-                        // Console.WriteLine($"Word: {item} ");
                         
                         var getString = strAry[0].Split(item, StringSplitOptions.RemoveEmptyEntries);
                         
@@ -89,7 +88,6 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges
                                 result01 = item01;
                             }
                         }
-                        // Console.WriteLine($"result01: {result01} ");
 
                         if(!string.IsNullOrEmpty(result01)) {
 
