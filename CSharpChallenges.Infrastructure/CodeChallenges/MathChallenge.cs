@@ -1,4 +1,5 @@
 using System.Security.Cryptography.X509Certificates;
+using System.Xml.Serialization;
 using CSharpChallenges.Infrastructure.Enums;
 using CSharpChallenges.Infrastructure.Interfaces;
 
@@ -44,6 +45,49 @@ namespace CSharpChallenges.Infrastructure.CodeChallenges {
             
             // Console.WriteLine($"{a},{b},{c}: {neg},{plus} ");
             return new Tuple<double, double>(plus,neg); 
+        }
+
+        public int BracketCombinations(int num) {
+            int res = 0; 
+            // Console.WriteLine($"Num: {num} ");            
+            if (num <= 1) { return 1; }
+
+            for (int i = 0; i < num; i++) {
+                res += BracketCombinations(i) * BracketCombinations(num - (i + 1) ); 
+                // Console.WriteLine($"Num: {num} - Res: {res}");
+            } 
+            return res; 
+        }
+
+        public string QuestionsMarks(string str) { 
+            char defChar = 'a';
+            string result = "false";
+            int counter = 0;
+            char prevDigit = defChar;
+            char curDigit = defChar;
+
+            for (int i = 0; i < str.Length; i++) {
+                char digit = str[i];
+                if (digit == '?') { counter++; }
+                else if (char.IsDigit(digit)) {
+                    if (prevDigit == defChar) { prevDigit = digit; }
+                    else if (curDigit == defChar) {
+                        curDigit = digit;
+                        bool checkValue = (int)char.GetNumericValue(prevDigit) + (int)char.GetNumericValue(curDigit) == 10;
+                        bool checkCount = counter == 3;
+                        if ( checkValue && checkCount ) {
+                            result = "true";
+                            prevDigit = curDigit;
+                            curDigit = defChar;
+                        }
+                        else if( checkValue && !checkCount ) {
+                            return "false";
+                        }
+                    }
+                    counter = 0;
+                }
+            }
+            return result;
         }
     }
 }

@@ -3,6 +3,13 @@ namespace CSharpChallenges.Infrastructure.ExampleChallenges
     /// <summary> Binary Search Tree:  </summary>
     public class BinarySearchTree
     {
+        public string TreeConstructor(string[] strArr) {
+            var childs = strArr.ToList().Select(i => i.Split(',')[0].Replace("(", string.Empty)).ToList();
+            var parents = strArr.ToList().Select(i => i.Split(',')[1].Replace(")", string.Empty)).ToList();
+            return childs.Distinct().Count() == strArr.Count() && 
+                !parents.GroupBy(p => p).Where(g => g.Count() > 2).Any() ? "true" : "false";
+        }
+
         public bool Contains(Node root, int value)
         {
             if ( root == null) {
