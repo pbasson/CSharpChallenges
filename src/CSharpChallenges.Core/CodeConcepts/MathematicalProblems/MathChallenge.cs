@@ -34,16 +34,6 @@ public class MathChallenge : IMathChallenge
         return new Tuple<int, int>(0,0);
     }
 
-    public Tuple<double, double> FindRoots(double a, double b, double c)
-    {
-        var original = (b*b) - (4*a*c);
-
-        var plus = (-b + Math.Sqrt(original))/(2*a); 
-        var neg = (-b - Math.Sqrt(original))/(2*a); 
-        
-        return new Tuple<double, double>(plus,neg); 
-    }
-
     public int BracketCombinations(int num) {
         if (num <= 1) { return 1; }
         
