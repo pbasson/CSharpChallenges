@@ -8,5 +8,6 @@ public interface IMathChallenge
     Tuple<int, int> FindTwoSum(List<int> list, int sum);
     /// <summary> Quadratic Equation:  </summary>
     Tuple<double, double> FindRoots(double a, double b, double c);
-
+    int BracketCombinations(int num);
+    string QuestionsMarks(string str);
 }

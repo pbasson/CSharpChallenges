@@ -1,4 +1,5 @@
 namespace CSharpChallenges.Core.CodeConcepts.MathematicalProblems; 
+
 public class MathChallenge : IMathChallenge
 {
     public double GetDiscountedPrice(double cartWeight, double totalPrice, DiscountType discountType) {
@@ -35,21 +36,21 @@ public class MathChallenge : IMathChallenge
 
     public Tuple<double, double> FindRoots(double a, double b, double c)
     {
-        var plus = (-b + Math.Sqrt((b*b) - (4*a*c) ))/(2*a); 
-        var neg = (-b - Math.Sqrt((b*b) - (4*a*c) ))/(2*a); 
+        var original = (b*b) - (4*a*c);
+
+        var plus = (-b + Math.Sqrt(original))/(2*a); 
+        var neg = (-b - Math.Sqrt(original))/(2*a); 
         
-        // Console.WriteLine($"{a},{b},{c}: {neg},{plus} ");
         return new Tuple<double, double>(plus,neg); 
     }
 
     public int BracketCombinations(int num) {
-        int res = 0; 
-        // Console.WriteLine($"Num: {num} ");            
         if (num <= 1) { return 1; }
+        
+        int res = 0; 
 
         for (int i = 0; i < num; i++) {
             res += BracketCombinations(i) * BracketCombinations(num - (i + 1) ); 
-            // Console.WriteLine($"Num: {num} - Res: {res}");
         } 
         return res; 
     }
@@ -84,4 +85,5 @@ public class MathChallenge : IMathChallenge
         }
         return result;
     }
+
 }
