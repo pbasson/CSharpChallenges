@@ -1,6 +1,6 @@
 namespace CSharpChallenges.Core.CodeConcepts.CoreAlgorithms; 
 
-public class StringChallenge : IStringChallenge
+public class StringChallenge 
 {
     public List<string> AllPrefixes(int prefixLength, IEnumerable<string> words)
     {

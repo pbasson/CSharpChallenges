@@ -1,6 +1,6 @@
 namespace CSharpChallenges.Core.CodeConcepts.DataManipulation; 
 
-public class LinqChallenges : ILinqChallenges {
+public class LinqChallenges {
     public int CountNumbers(int[] sortedArray, int lessThan) {
         int counter = 0;
         Func<int, bool> IsLess = x => x < (lessThan+1) ; 

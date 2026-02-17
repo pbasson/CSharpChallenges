@@ -1,6 +1,6 @@
 namespace CSharpChallenges.Core.CodeConcepts.MathematicalProblems; 
 
-public class MathChallenge : IMathChallenge
+public class MathChallenge
 {
     public double GetDiscountedPrice(double cartWeight, double totalPrice, DiscountType discountType) {
         switch (discountType)

@@ -2,7 +2,7 @@ namespace CSharpChallenges.Core.Tests.CodeConcepts.MathematicalProblems;
 
 public class MathChallenge_Tests
 {
-    private readonly IMathChallenge _mathChallenge;
+    private readonly MathChallenge _mathChallenge;
 
     public MathChallenge_Tests()
     {

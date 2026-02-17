@@ -1,6 +1,6 @@
 namespace CSharpChallenges.Core.CodeConcepts.CoreAlgorithms; 
 
-public class PalindromeChallenge : IPalindromeChallenge {
+public class PalindromeChallenge  {
     // <summary> Find Palindrome in String. Will only contain Alphabet from this it is will identified if string is a Palindrome </summary>
     public void FindPalindromeInString(string str) {
 

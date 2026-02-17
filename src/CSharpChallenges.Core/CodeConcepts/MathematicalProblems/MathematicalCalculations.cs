@@ -25,7 +25,14 @@ public class MathematicalCalculations
 
     public double Power(int a, int b) => Math.Pow(a, b);
 
-    public double SquareRoot(int a) => Math.Sqrt(a);
+    public double SquareRoot(int a)
+    {
+        if (a < 0)
+        {
+            throw new ArgumentException("Input must be a non-negative number.");
+        }
+        return Math.Sqrt(a);
+    }
 
     public double Absolute(int a) => Math.Abs(a);
 
