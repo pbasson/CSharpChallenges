@@ -21,24 +21,13 @@ public class LinqChallenges {
     }
 
     public void GetEvenNumbersFromList(int[] evenList) {
-        
-        Func<int, bool> IsLinq = ( x => x % 2 == 0 );
-        var getList = evenList.Where( IsLinq ).ToArray();
 
-        // var getList1 = from even in evenList
-        //             where even % 2 == 0 
-        //             select even; 
+        static bool IsLinq(int x) => x % 2 == 0;
+        var getList = evenList.Where(IsLinq ).ToArray();
 
-        // for (int i = 0; i < getList.Count(); i++) {
-        //     Console.WriteLine( $"{getList[i]}" );
-        // }
         getList.ToList().ForEach(action => {
             Console.WriteLine( $"{action}" ); 
         } );            
-        
-        // foreach (var item in getList1) {
-        //     Console.WriteLine( $"{item}" );
-        // }
 
     }
 }

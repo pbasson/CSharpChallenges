@@ -37,6 +37,39 @@ public class MathChallenge_Tests
         var result = _mathChallenge.BracketCombinations(num);   
     
         // Assert
-        Assert.Equal(expectedValue, result);}
+        Assert.Equal(expectedValue, result);
+    }
+
+    [Theory]
+    [InlineData(new int[] {1, 2, 3, 4}, 3)]
+    [InlineData(new int[] {4, 4, 4}, -1 )]
+    [InlineData(new int[] {3, 3}, -1 )]
+    [InlineData(new int[] {5}, -1)]
+    public void SecondLargest_ShouldReturnExpectedResult(int[] input, int expected)
+    {
+        // Arrange && Act
+        var result = _mathChallenge.SecondLargest(input);
+
+        // Arrange
+        Assert.Equal(expected,result);  
+    }
+
+    [Theory]
+    [InlineData(new int[] {100, -50, -100, 30}, 30)]
+    [InlineData(new int[] {-50, 100 }, 100)]
+    [InlineData(new int[] {-10, -20, -30}, 0)]
+    [InlineData(new int[] {50, -10, -100, 20}, 20)]
+    [InlineData(new int[] {0, 0, 0}, 0)]
+    [InlineData(new int[] {}, 0)]
+    public void GetFinalBalance_ShouldReturnExpectedResult(int[] input, int expected)
+    {
+        // Arrange && Act
+        var result = _mathChallenge.GetFinalBalance(input);
+
+        // Arrange
+        Assert.Equal(expected,result);  
+    }
+
+    
 }
 

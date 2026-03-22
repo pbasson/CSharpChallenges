@@ -76,4 +76,32 @@ public class MathChallenge
         return result;
     }
 
+    public int SecondLargest(int[] numbers)
+    {
+        var baseline = -1;
+
+        if (numbers == null || numbers.Length < 2)
+            return baseline;
+
+        var distinctNumbers = numbers
+            .Distinct()
+            .OrderByDescending(x => x)
+            .ToArray();
+
+        return distinctNumbers.Length > 1 ? distinctNumbers[1] : baseline;
+    }
+    
+    public int GetFinalBalance(int[] transactions)
+    {
+        int balance = 0;
+        for(var i = 0; i <transactions.Length; i++)
+        {
+            balance += transactions[i]; 
+
+            if(balance < 0)
+                balance = 0;
+        }
+
+        return balance; 
+    }
 }

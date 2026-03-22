@@ -26,7 +26,7 @@ public class StringChallenge
             case ModifyStringOptions.Alphabet: 
                 Console.WriteLine($"String: {str}");
 
-                var newChar = str.ToLower().Where(x => Char.IsLetter(x) );                
+                var newChar = str.ToLower().Where(x => Char.IsNumber(x) );                
                 Console.WriteLine($"newString: {string.Join("", newChar)}");
                 break;
             default:
@@ -105,5 +105,17 @@ public class StringChallenge
             
             throw;
         }
+    }
+
+    public int CountUniqueWords(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return 0;
+
+        return input
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(word => word.ToLower())
+            .Distinct()
+            .Count();
     }
 }
